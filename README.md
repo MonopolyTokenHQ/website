@@ -1,6 +1,6 @@
 # Monopoly Token
 
-[Visit Colllect landing page](https://monopolytoken.online)
+[Visit monopolytoken page](https://monopolytoken.online)
 
 
 # Licence
