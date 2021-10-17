@@ -1,0 +1,155 @@
+.m-control {
+    @include for-tablet-landscape-up {
+        text-align: center;
+    }
+}
+
+.m-control--title {
+    margin-bottom: 20px;
+}
+
+.m-control--text {
+    @include for-tablet-landscape-up {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.m-control--columns {
+    text-align: left;
+    max-width: 1140px;
+
+    @include for-tablet-portrait-up {
+        display: flex;
+        margin: 50px auto;
+    }
+    @include for-tablet-landscape-up {
+        margin: 80px auto;
+    }
+}
+
+.m-control--column {
+    @include for-tablet-landscape-up {
+        padding: 50px 84px 30px;
+    }
+
+    strong {
+        font-family: $font-montserrat;
+    }
+    p {
+        color: $bali-hai;
+        line-height: 28px;
+        margin: 10px 0 20px;
+    }
+}
+
+.m-control--column-interface-storage {
+    padding-top: 40px;
+
+    .m-control--block + .m-control--block {
+        margin-top: 40px;
+    }
+
+    @include for-tablet-portrait-up {
+        padding-right: 30px;
+    }
+    @include for-tablet-landscape-up {
+        padding-top: 82px;
+    }
+    @include for-desktop-up {
+        margin-right: 90px;
+        padding-top: 90px;
+        padding-right: 0;
+
+        .m-control--block + .m-control--block {
+            margin-top: 100px;
+        }
+    }
+}
+
+.m-control--column-likely {
+    padding: 40px 20px 1px;
+    margin: 50px -10px 0;
+    background-color: $catskill-white;
+    border-radius: $border-radius;
+
+    @include for-tablet-portrait-up {
+        margin-top: -41px;
+    }
+    @include for-tablet-landscape-up {
+        padding: 40px 40px 0;
+        margin: 0 0 0 90px;
+    }
+    @include for-desktop-up {
+        padding: 50px 80px 30px;
+        margin: 0 0 0 90px;
+    }
+
+    .m-control--column-title {
+        display: block;
+        color: rgba($chetwode-blue, 0.8);
+        font-family: $font-montserrat;
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+
+    .m-control--block {
+        margin-bottom: 40px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 24px;
+
+        @include for-tablet-portrait-up {
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+}
+
+.m-control--block-title {
+    font-family: $font-montserrat;
+}
+
+.m-control--icon {
+    width: 24px;
+    height: 21px;
+    vertical-align: bottom;
+    margin-right: 5px;
+    opacity: 0.7;
+    margin-left: -3px;
+}
+
+.m-control--dots {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include for-desktop-up {
+        display: flex;
+    }
+
+    li {
+        margin-right: 30px;
+        padding-bottom: 15px;
+        font-family: $font-montserrat;
+
+        @include for-desktop-up {
+            padding-bottom: 0;
+            font-size: 14px;
+        }
+
+        svg {
+            float: left;
+            width: 6px;
+            height: 10px;
+            margin-right: 10px;
+            transform: translateY(5px);
+
+            @include for-desktop-up {
+                transform: translateY(3px);
+            }
+        }
+    }
+}

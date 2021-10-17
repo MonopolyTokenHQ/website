@@ -1,0 +1,256 @@
+.m-inspiration--text-wrapper {
+    @include for-desktop-up {
+        width: 400px;
+    }
+
+    .m-main--subtitle {
+        @include for-mid-desktop-up {
+            padding-top: 35px;
+        }
+        @include for-big-desktop-up {
+            padding-top: 0;
+        }
+    }
+}
+.m-inspiration {
+    position: relative;
+    margin-top: -100px;
+
+    @include for-desktop-up {
+        margin: 85px 200px 580px 700px;
+        animation: inspirationFadeIn 2.5s;
+    }
+    @include for-mid-desktop-up {
+        margin: 0 200px 580px 780px;
+    }
+    @include for-big-desktop-up {
+        margin: 0 180px 580px 854px;
+    }
+}
+
+.m-inspiration--elements-outer {
+    width: 100vw;
+    margin-left: -20px;
+    padding: 0 20px 20px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @include for-tablet-portrait-up {
+        margin-left: -50px;
+    }
+}
+
+.m-inspiration--elements {
+    display: flex;
+    width: calc(((65vw + 10px) * 4) + 10px);
+
+    @include for-tablet-portrait-up {
+        width: calc(((35vw + 10px) * 4) + 10px);
+    }
+    @include for-tablet-landscape-up {
+        width: 100%;
+    }
+    @include for-desktop-up {
+        display: block;
+    }
+}
+
+.m-inspiration--element {
+    width: 65vw;
+    padding: 20px;
+    background-color: $white;
+    border-radius: $border-radius;
+    box-shadow: 0 12px 29px rgba($snuff, 0.8);
+    margin: 18px 10px 18px 0;
+
+    @include for-desktop-up {
+        position: absolute;
+        width: 185px;
+        margin: 18px 18px 18px 0;
+    }
+
+    @include for-mid-desktop-up {
+        width: 216px;
+    }
+
+    @include for-big-desktop-up {
+        width: 238px;
+    }
+}
+
+.m-inspiration--element-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+}
+
+.m-inspiration--element-name {
+    display: inline-block;
+    height: 32px;
+    font-family: $font-montserrat;
+    font-size: 14px;
+    line-height: 32px;
+    color: $chetwode-blue;
+    vertical-align: top;
+}
+
+.m-inspiration--element-description {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 5px 0 0;
+}
+
+.m-inspiration--element-outline {
+    display: none;
+}
+
+@include for-desktop-up {
+    .m-inspiration--element-picture {
+        top: 213px;
+        left: -501px;
+    }
+
+    .m-inspiration--element-note {
+        top: 120px;
+        left: -303px;
+    }
+
+    .m-inspiration--element-link {
+        top: 383px;
+        left: -303px;
+    }
+
+    .m-inspiration--element-color {
+        top: 425px;
+        left: -105px;
+    }
+
+    .m-inspiration--element-outline-feed {
+        top: -67px;
+        left: -501px;
+    }
+
+    .m-inspiration--element-outline-site {
+        top: -145px;
+        left: -303px;
+    }
+}
+
+@include for-mid-desktop-up {
+    .m-inspiration--element-description {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .m-inspiration--element-outline {
+        display: block;
+        position: absolute;
+        width: 216px;
+    }
+
+    .m-inspiration--element-picture {
+        top: 280px;
+        left: -547px;
+    }
+
+    .m-inspiration--element-note {
+        top: 170px;
+        left: -315px;
+    }
+
+    .m-inspiration--element-link {
+        top: 432px;
+        left: -315px;
+    }
+
+    .m-inspiration--element-color {
+        top: 500px;
+        left: -85px;
+    }
+
+    .m-inspiration--element-outline-feed {
+        top: -51px;
+        left: -547px;
+    }
+
+    .m-inspiration--element-outline-site {
+        top: -144px;
+        left: -315px;
+    }
+
+    .m-inspiration--element-outline-link {
+        top: 725px;
+        left: -85px;
+    }
+
+    .m-inspiration--element-outline-color {
+        top: 851px;
+        left: -85px;
+    }
+
+    .m-inspiration--element-outline-text {
+        top: 791px;
+        left: 147px;
+    }
+}
+
+@include for-big-desktop-up {
+    .m-inspiration--element-picture {
+        top: 278px;
+        left: -597px;
+    }
+
+    .m-inspiration--element-note {
+        top: 155px;
+        left: -340px;
+    }
+
+    .m-inspiration--element-link {
+        top: 425px;
+        left: -340px;
+    }
+
+    .m-inspiration--element-color {
+        top: 480px;
+        left: -85px;
+    }
+
+    .m-inspiration--element-outline {
+        width: 238px;
+    }
+
+    .m-inspiration--element-outline-feed {
+        top: -89px;
+        left: -597px;
+    }
+
+    .m-inspiration--element-outline-site {
+        top: -191px;
+        left: -340px;
+    }
+
+    .m-inspiration--element-outline-link {
+        top: 705px;
+        left: -85px;
+    }
+
+    .m-inspiration--element-outline-color {
+        top: 841px;
+        left: -85px;
+    }
+
+    .m-inspiration--element-outline-text {
+        top: 777px;
+        left: 172px;
+    }
+}
+
+@keyframes inspirationFadeIn {
+    0%,
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

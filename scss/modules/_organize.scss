@@ -1,0 +1,408 @@
+.m-organise {
+    position: relative;
+    margin-bottom: 70px;
+
+    @include for-tablet-landscape-up {
+        margin-bottom: 200px;
+    }
+    @include for-desktop-up {
+        margin-top: -160px;
+    }
+    @include for-mid-desktop-up {
+        margin-top: -60px;
+    }
+    @include for-big-desktop-up {
+        margin-top: -40px;
+    }
+}
+
+.m-organise--subtitle,
+.m-organise--title,
+.m-organise--text {
+    @include for-desktop-up {
+        width: 400px;
+        margin-left: 100px;
+    }
+    @include for-mid-desktop-up {
+        width: 365px;
+        margin-left: 185px;
+    }
+    @include for-big-desktop-up {
+        width: 400px;
+        margin-left: 185px;
+    }
+}
+
+.m-organise--menu {
+    position: relative;
+    margin: -60px 0 0;
+
+    @media (min-width: 750px) {
+        margin: 16% 370px 16% -10px;
+    }
+    @include for-desktop-up {
+        width: 100%;
+        display: inline-block;
+        margin: 30px 0 0 83px;
+    }
+    @include for-mid-desktop-up {
+        margin: 50px 0 0 168px;
+    }
+}
+
+.m-organise--menu-item {
+    position: relative;
+    display: block;
+    width: 436px;
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 15px 0 15px 45px;
+    color: rgba($chetwode-blue, 0.4);
+    font-family: $font-roboto;
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 200ms;
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    strong {
+        display: block;
+        font-family: $font-montserrat;
+        color: $shark;
+        padding-bottom: 4px;
+        font-size: 16px;
+    }
+
+    @include for-tablet-landscape-up {
+        width: 400px;
+        padding: 22px 0 22px 85px;
+        font-size: 16px;
+
+        strong {
+            padding-bottom: 8px;
+        }
+    }
+    @include for-desktop-up {
+        width: 436px;
+    }
+    @include for-mid-desktop-up {
+        width: 400px;
+    }
+    @include for-big-desktop-up {
+        width: 436px;
+    }
+}
+
+.m-organise--menu-item-arrow {
+    position: absolute;
+    top: 50%;
+    left: 23px;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border: 1px solid rgba($chetwode-blue, 0.4);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+
+    @include for-tablet-landscape-up {
+        left: 50px;
+        width: 30px;
+        height: 30px;
+        padding: 8px;
+    }
+}
+
+.m-organise--menu-item-arrow-spike {
+    transform: translateX(-4px);
+    fill: $snuff;
+    transition: transform 200ms, fill 200ms;
+}
+
+.m-organise--menu-item-arrow-dash {
+    transform: translateX(-30px);
+    transition: transform 200ms;
+}
+
+.m-organise--menu-item {
+    &:hover {
+        .m-organise--menu-item-arrow-spike {
+            fill: $chetwode-blue;
+        }
+    }
+    &.m-organise--menu-item-active {
+        color: $chetwode-blue;
+
+        .m-organise--menu-item-arrow-spike {
+            transform: translateX(0);
+            fill: $chetwode-blue;
+        }
+        .m-organise--menu-item-arrow-dash {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+.m-organise--menu-item-active-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 68px;
+    width: 100%;
+    box-shadow: 0 8px 29px rgba($chetwode-blue, 0.35);
+    pointer-events: none;
+    border-radius: $border-radius;
+    transition: top 150ms, bottom 150ms;
+
+    @include for-tablet-landscape-up {
+        width: 400px;
+        height: 88px;
+    }
+    @include for-desktop-up {
+        width: 436px;
+    }
+    @include for-mid-desktop-up {
+        width: 400px;
+    }
+    @include for-big-desktop-up {
+        width: 436px;
+    }
+}
+
+.m-organise--shape {
+    width: 152%;
+    max-height: 110vw;
+    max-width: 500px;
+    margin: -30px 0 0 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: 750px) {
+        position: absolute;
+        margin-top: 30px;
+        margin-right: -15%;
+        margin-left: 0;
+        top: calc(150px - 10%);
+        right: 0;
+        width: calc(152% - 500px);
+        max-width: 520px;
+        transform: none;
+    }
+    @include for-tablet-landscape-up {
+        margin-top: 50px;
+        right: 15px;
+        width: calc(152% - 650px);
+        max-width: 620px;
+    }
+    @include for-desktop-up {
+        top: -60px;
+        right: 75px;
+        width: 785px;
+        max-width: inherit;
+    }
+    @include for-mid-desktop-up {
+        top: -130px;
+        right: 212px;
+        width: 910px;
+    }
+    @include for-big-desktop-up {
+        top: -131px;
+        right: 233px;
+        width: 1000px;
+    }
+}
+
+.m-organise--shape-select-tag {
+    transform-origin: center center;
+    transform: translate(-12px, -54px) scale(0.2, 0.2);
+    opacity: 0;
+    transition: transform 300ms, opacity 300ms;
+}
+
+.m-organise--shape-element {
+    transition: opacity 300ms, transform 300ms;
+}
+
+.m-organise--shape-element-empty {
+    transform: translate(0, 20px);
+}
+
+.m-organise--shape-stack,
+.m-organise--shape-collection {
+    transition: opacity 300ms, transform 300ms;
+}
+
+.m-organise--shape-stack,
+.m-organise--shape-collection {
+    opacity: 0;
+    transform: translate(0, 50px);
+}
+
+.m-organise--shape-element-player,
+.m-organise--shape-element-notification {
+    .m-organise--shape-collection {
+        transform: translate(0, 100px);
+    }
+}
+
+.m-organise--shape[data-state-name="tag-manager"],
+.m-organise--shape[data-state-name="multiple-selection"] {
+    .m-organise--shape-element-player {
+        transform: translate(0, -60px);
+    }
+
+    .m-organise--shape-element-tchat {
+        transform: translate(0, -120px);
+    }
+
+    .m-organise--shape-element-notification {
+        transform: translate(0, -60px);
+    }
+
+    .m-organise--shape-element-empty {
+        transform: translate(0, -60px);
+    }
+}
+
+.m-organise--shape-element-multiple-stroke {
+    stroke: transparent;
+    stroke-width: 0;
+    transition: stroke 150ms, stroke-width 150ms;
+}
+
+.m-organise--shape[data-state-name="tag-manager"] {
+    .m-organise--shape-select-tag {
+        transform: translate(-12px, -54px) scale(1, 1);
+        opacity: 1;
+    }
+
+    .m-organise--shape-element {
+        opacity: 0.4;
+    }
+
+    .m-organise--shape-element-player {
+        opacity: 1;
+    }
+}
+
+.m-organise--shape[data-state-name="multiple-selection"] {
+    .m-organise--shape-element {
+        opacity: 0.4;
+    }
+
+    .m-organise--shape-element-multiple-stroke {
+        stroke: $wewak;
+        stroke-width: 4px;
+    }
+
+    .m-organise--shape-element-player,
+    .m-organise--shape-element-notification,
+    .m-organise--shape-element-tchat {
+        opacity: 1;
+    }
+
+    .m-organise--shape-element-player {
+        .m-organise--shape-element-multiple-stroke {
+            animation: selectPlayerStroke 0.75s;
+        }
+    }
+
+    .m-organise--shape-element-notification {
+        animation: selectNotificationOpacity 0.75s;
+
+        .m-organise--shape-element-multiple-stroke {
+            animation: selectNotificationStroke 0.75s;
+        }
+    }
+
+    .m-organise--shape-element-tchat {
+        animation: selectTchatOpacity 0.75s;
+
+        .m-organise--shape-element-multiple-stroke {
+            animation: selectTchatStroke 0.75s;
+        }
+    }
+}
+
+.m-organise--shape[data-state-name="collections"] {
+    .m-organise--shape-element {
+        opacity: 0.4;
+    }
+
+    .m-organise--shape-element-text,
+    .m-organise--shape-element-player,
+    .m-organise--shape-element-tchat,
+    .m-organise--shape-element-notification {
+        opacity: 1;
+    }
+
+    .m-organise--shape-stack,
+    .m-organise--shape-collection {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes selectNotificationOpacity {
+    0%,
+    50% {
+        opacity: 0.4;
+    }
+    75%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes selectTchatOpacity {
+    0%,
+    75% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes selectPlayerStroke {
+    0%,
+    25% {
+        stroke: transparent;
+        stroke-width: 0;
+    }
+    50%,
+    100% {
+        stroke: $wewak;
+        stroke-width: 4px;
+    }
+}
+
+@keyframes selectNotificationStroke {
+    0%,
+    50% {
+        stroke: transparent;
+        stroke-width: 0;
+    }
+    75%,
+    100% {
+        stroke: $wewak;
+        stroke-width: 4px;
+    }
+}
+
+@keyframes selectTchatStroke {
+    0%,
+    75% {
+        stroke: transparent;
+        stroke-width: 0;
+    }
+    100% {
+        stroke: $wewak;
+        stroke-width: 4px;
+    }
+}

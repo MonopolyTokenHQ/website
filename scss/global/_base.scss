@@ -1,0 +1,88 @@
+html,
+body {
+    color: $shark;
+    background-color: $white;
+    font-family: $font-roboto;
+}
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.is-safari {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    body {
+        overflow-y: visible;
+    }
+
+    @include for-desktop-up {
+        overflow: visible;
+    }
+}
+
+body {
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: calc(-#{$body-background-height} + 420px);
+        left: 0;
+        height: $body-background-height;
+        width: 100%;
+        background: $shark;
+        transform: skewY(-30deg);
+        pointer-events: none;
+        user-select: none;
+        z-index: 1;
+    }
+
+    @include for-tablet-portrait-up {
+        margin: 0 auto;
+
+        &::before {
+            top: calc(-#{$body-background-height} + 620px);
+        }
+    }
+    @include for-desktop-up {
+        margin: 0 auto;
+        max-width: 1180px;
+
+        &::before {
+            top: calc(-#{$body-background-height} + 680px);
+        }
+    }
+    @include for-mid-desktop-up {
+        max-width: 1380px;
+
+        &::before {
+            top: calc(-#{$body-background-height} + 765px);
+        }
+    }
+    @include for-big-desktop-up {
+        max-width: 1522px;
+
+        &::before {
+            top: calc(-#{$body-background-height} + 875px);
+        }
+    }
+
+    &.no-animation {
+        &,
+        & * {
+            animation: none !important;
+        }
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+svg {
+    pointer-events: none;
+}
